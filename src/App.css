@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+/* src/styles/global.css */
+.font-sevillana {
+  font-family: 'Sevillana', serif;
+}
+
+.font-bona-nova {
+  font-family: 'Bona Nova SC', serif;
+}
+

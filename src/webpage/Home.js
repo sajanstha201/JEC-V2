@@ -1,7 +1,11 @@
+import { IntroductionSection } from "./IntroductionSection"
+import UpdatesSection from "./Updates"
+
 export const Home=()=>{
     return(
         <>
-        <h1>THis is Home Page</h1>
+        <IntroductionSection/>
+        <UpdatesSection/>
         </>
     )
 }
