@@ -13,7 +13,7 @@ export const Header =()=>{
                 <div className="lists w-full md:w-auto flex items-center justify-center md:justify-end md:mr-4 bg-black">
                     <ul className="flex flex-wrap justify-center md:justify-end gap-5 p-2 flex-col md:flex-row">
                         <li><Link to='/admission' className="text-xl text-white">Admission</Link></li>
-                        <li><Link to='/about-us' className="text-xl text-white">About</Link></li>
+                        <li><Link to='/about' className="text-xl text-white">About</Link></li>
                         <li><Link to='/academic' className="text-xl text-white">Academic</Link></li>
                         <li><Link to='/facilities' className="text-xl text-white">Facilities</Link></li>
                         <li><Link to='/news' className="text-xl text-white">News</Link></li>
