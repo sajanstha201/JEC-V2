@@ -1,46 +1,44 @@
-import React from 'react';
+import React from "react";
 
-const UpdatesSection = () => {
-    return (
-        <div className="absolute w-full mt-2">
-            <section className="bg-cover bg-blue-500 mt-16 p-5 w-full">
-                {/* Overlay */}
-                <div className="bg-opacity-70 h-full flex items-center justify-center w-full">
-                    <div className="text-white text-center w-full">
-                        <div className="bg-red-600 p-8 rounded-lg shadow-lg inline-block relative bottom-20">
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 p-5">
-                                <div>
-                                    <h2 className="text-4xl font-bold">2k+</h2>
-                                    <p className="text-lg">STUDENTS</p>
-                                </div>
-                                <div>
-                                    <h2 className="text-4xl font-bold">30+</h2>
-                                    <p className="text-lg">PROFESSORS</p>
-                                </div>
-                                {/* <div>
-                                    <h2 className="text-4xl font-bold">50+</h2>
-                                    <p className="text-lg">STARTUPS</p>
-                                </div> */}
-                                <div>
-                                    <h2 className="text-4xl font-bold">3</h2>
-                                    <p className="text-lg">COURSES</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+const Updates = () => {
+  return (
+    <>
+      <div className="relative flex flex-col items-center bg-green-500">
+        <div className="absolute top-[calc(-8vh-15px)] bg-blue-500  sm:h-[180px]  md:h-[150px] w-full max-w-[1100px] flex flex-wrap items-center justify-center gap-8 md:gap-[80px] rounded-[20px] z-50 p-4 md:p-0">
+          <span className="text-center text-white">
+            <h1 className="text-[40px] md:text-[60px] font-bold ">10K+</h1>
+            <h1 className="text-[16px] md:text-[20px] font-bold">STUDENTS</h1>
+          </span>
+          <span className="text-center text-white ">
+            <h1 className="text-[40px] md:text-[50px] font-bold">300+</h1>
+            <h1 className="text-[16px] md:text-[20px] font-bold">PROFESSORS</h1>
+          </span>
+          <span className="text-center text-white ">
+            <h1 className="text-[40px] md:text-[50px] font-bold">50+</h1>
+            <h1 className="text-[16px] md:text-[20px] font-bold">STARTUPS</h1>
+          </span>
+          <span className="text-center text-white ">
+            <h1 className="text-[40px] md:text-[50px] font-bold">15</h1>
+            <h1 className="text-[16px] md:text-[20px] font-bold">COURSES</h1>
+          </span>
         </div>
-    );
+      </div>
+
+     <div className="container mt-[120px] w-[1150px] mb-[100px]">
+      <div className="row">
+        <div className="col-sm-12 col-md-4">
+                    <h1 className="ms-[20px] text-[18px] text-center"  style={{ fontFamily: "'Merriweather', serif" }} >Latest Updates</h1>
+        </div>
+
+         <div className="col-sm-12 col-md-8">  
+               <h1 className="ms-[30px] text-[15px]"  style={{ fontFamily: "'Merriweather', serif" }}>University is implementing a phased recovery of university operations. We are currently in Phase 2 of the restart process.</h1>
+         </div>
+
+      </div>
+
+     </div>
+    </>
+  );
 };
 
-export default UpdatesSection;
-
-
-
-
-
-
-
-
-
+export default Updates;
