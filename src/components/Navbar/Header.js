@@ -27,7 +27,7 @@ export const Header = () => {
                 <div className='hidden md:flex md:w-auto items-center justify-center md:justify-end md:mr-4'>
                     <ul className='flex flex-row gap-5 p-2'>
                         <li><Link to='/admission' className="text-xl text-white">Admission</Link></li>
-                        <li><Link to='/about-us' className="text-xl text-white">About</Link></li>
+                        <li><Link to='/about' className="text-xl text-white">About</Link></li>
                         <li><Link to='/academic' className="text-xl text-white">Academic</Link></li>
                         <li><Link to='/facilities' className="text-xl text-white">Facilities</Link></li>
                         <li><Link to='/news' className="text-xl text-white">News</Link></li>
