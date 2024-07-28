@@ -3,7 +3,7 @@ import academic from '../../images/academic.png';
 export default function Events() {
   return (
    <>
-   <div className='container mt-[390px]'>
+   <div className='container '>
   <div className='row'>
     <div className='col-md-6 col-2xl-12 col-sm-12 flex text-center h-[300px] align-items-center justify-content-center'>
          <h1 className='text-[45px]  mb-[110px]' style={{ fontFamily: "'Merriweather', serif" }}>Happening Now</h1>
