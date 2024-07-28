@@ -1,5 +1,10 @@
 import styled from "styled-components";
+<<<<<<< HEAD
+import jecimg from "../../src/media/images/jec.png";
+
+=======
 import jecimg from '../media/images/jec.png'
+>>>>>>> origin/main
 const BackDivImg = styled.div`
   background-image: url(${jecimg});
   background-size: cover;
@@ -8,6 +13,10 @@ const BackDivImg = styled.div`
   width: 100%;
   opacity: 1;
 `;
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/main
 export const IntroductionSection = () => {
   return (
     <>
@@ -36,4 +45,8 @@ export const IntroductionSection = () => {
       </header>
     </>
   );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/main

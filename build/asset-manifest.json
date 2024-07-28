@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/JEC-V2/static/js/main.cd886813.js",
+    "static/js/453.ed3810f9.chunk.js": "/JEC-V2/static/js/453.ed3810f9.chunk.js",
+    "static/media/jec.png": "/JEC-V2/static/media/jec.e3be31ca3f78edbac9ee.png",
+    "static/media/academic.png": "/JEC-V2/static/media/academic.755e41b19e50af1da053.png",
+    "static/media/jec-logo.png": "/JEC-V2/static/media/jec-logo.3f82a3ed3c5606dfd30e.png",
+    "index.html": "/JEC-V2/index.html",
+    "main.cd886813.js.map": "/JEC-V2/static/js/main.cd886813.js.map",
+    "453.ed3810f9.chunk.js.map": "/JEC-V2/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.cd886813.js"
+  ]
+}

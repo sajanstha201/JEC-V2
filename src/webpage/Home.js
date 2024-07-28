@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import { IntroductionSection } from "./IntroductionSection"
+import UpdatesSection from "./Updates"
+
+export const Home=()=>{
+    return(
+        <>
+        <IntroductionSection/>
+        <UpdatesSection/>
+        </>
+    )
+}
+=======
 import React from 'react'
 import { IntroductionSection } from './IntroductionSection'
 import UpdatesSection from './Updates'
@@ -14,3 +27,4 @@ export default function Home() {
     </div>
   )
 }
+>>>>>>> origin/main
