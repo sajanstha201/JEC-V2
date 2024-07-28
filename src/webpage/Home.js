@@ -1,30 +1,20 @@
-<<<<<<< HEAD
-import { IntroductionSection } from "./IntroductionSection"
-import UpdatesSection from "./Updates"
+import AboutUniversity from "./AboutUsPage/AboutUniversity"
+import Events from "./AboutUsPage/Events"
+import Introduction from "./IntroductionSection"
+import Updates from "./Updates"
 
 export const Home=()=>{
     return(
         <>
-        <IntroductionSection/>
-        <UpdatesSection/>
+        <Introduction/>
+   
+<div className="mx-[60px]">
+           <Updates/>
+        <Events/>
+        <AboutUniversity/>
+        </div>
         </>
+        
     )
 }
-=======
-import React from 'react'
-import { IntroductionSection } from './IntroductionSection'
-import UpdatesSection from './Updates'
-import Events from '../components/AboutUsPage/Events'
-import  AboutUniversity from '../components/AboutUsPage/AboutUniversity'
-
-export default function Home() {
-  return (
-    <div>
-      <IntroductionSection/>
-      <UpdatesSection/>
-      <Events/>
-      <AboutUniversity/>
-    </div>
-  )
-}
->>>>>>> origin/main
+export default Home

@@ -1,6 +1,6 @@
 import React from 'react';
 import students from '../../images/jec-students.jpg';
-import about from '../../images/jec-about.jpg';
+
 
 
 

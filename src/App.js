@@ -1,7 +1,7 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import Footer from './components/Navbar/Footer';
-import Events from './components/AboutUsPage/Events';
+import Events from './webpage/AboutUsPage/Events';
 
 import About from './components/About/About';
 
