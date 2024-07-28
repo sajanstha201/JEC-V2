@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 const UpdatesSection = () => {
     return (
         <div className="absolute w-full mt-2">
@@ -36,11 +33,8 @@ const UpdatesSection = () => {
         </div>
     );
 };
-<<<<<<< HEAD
 
 export default UpdatesSection;
-=======
-export default UpdatesSection;
 
 
 
@@ -48,4 +42,5 @@ export default UpdatesSection;
 
 
 
->>>>>>> origin/main
+
+
