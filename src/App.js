@@ -1,10 +1,9 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import Footer from './components/Navbar/Footer';
-import Events from './components/AboutUsPage/Events';
 import About from './components/About/About';
 import { Header } from './components/Navbar/Header';
-import { Home } from './components/webpage/Home';
+import Home from './webpage/Home';
 
 function App() {
   return (

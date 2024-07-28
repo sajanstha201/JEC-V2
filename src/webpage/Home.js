@@ -1,11 +1,12 @@
+import ImageSlider from "./ImageSlider";
 import { IntroductionSection } from "./IntroductionSection"
-import UpdatesSection from "./Updates"
 
 export const Home=()=>{
     return(
         <>
         <IntroductionSection/>
-        <UpdatesSection/>
+        <ImageSlider/>
         </>
     )
 }
+export default Home;
