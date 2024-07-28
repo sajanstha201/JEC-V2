@@ -7,6 +7,7 @@ export const Home=()=>{
         <IntroductionSection/>
         <ImageSlider/>
         </>
+        
     )
 }
 export default Home;

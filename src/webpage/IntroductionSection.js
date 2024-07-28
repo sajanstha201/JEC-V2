@@ -13,18 +13,16 @@ export const IntroductionSection = () => {
   return (
     <>
       <header>
-        {/* <video
-            className="w-full h-[95vh] object-cover -z-10 bgcolor relative"
-            autoPlay
-            muted
-          >
-            <source src={jecvideo} type="video/mp4" />
-          </video> */}
-        <BackDivImg className="sm:h-[70vh] w-full relative">
+        <div
+          className="bg-cover bg-center h-[80vh] w-full relative"
+          style={{ backgroundImage: `url(${jecimg})` }}
+        >
           <div className="block justify-center w-full mx-auto md:w-[60%] p-4 text-center items-center text-white">
             <div className="mt-40">
-              <h1 className="text-2xl font-bona-nova font-semibold ">JANAKPUR ENGINEERING COLLEGE</h1>
-              <p className="text-lg ">
+              <h1 className="text-2xl font-bona-nova font-semibold">
+                JANAKPUR ENGINEERING COLLEGE
+              </h1>
+              <p className="text-lg">
                 Janakpur engineering is a leading research university pushing
                 boundaries and frontiers to brighten the future of the students.
               </p>
@@ -33,7 +31,7 @@ export const IntroductionSection = () => {
               </button>
             </div>
           </div>
-        </BackDivImg>
+        </div>
       </header>
     </>
   );
