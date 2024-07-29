@@ -30,7 +30,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="relative w-11/12 mx-auto overflow-hidden max-w-[90%]">
+    <div className="relative w-11/12 mx-auto overflow-hidden max-w-[90%] my-8">
       <div className="justify-center items-center w-full mx-auto">
         <div style={{ display: "flex", justifyContent: "center", gap: "24px" }}>
           {images.slice(currentIndex, currentIndex + 3).map((image, index) => (
