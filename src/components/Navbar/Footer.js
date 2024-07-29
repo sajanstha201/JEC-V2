@@ -1,12 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
 import logo from '../../images/jec-logo.png';
+import FooterTop from './FooterTop';
 
 export default function Footer() {
   return (
-    <div className='bg-[#2C3A3A] pb-4 pt-2'>
+    <>
+    <FooterTop/>
+      <div className='bg-[#2C3A3A] pb-4 pt-2'>
       <div className='container text-white py-4' style={{ fontFamily: "'Merriweather', serif" }}>
         <div className='flex flex-wrap -mx-4'>
           <div className='w-full md:w-1/4 px-4 mb-4'>
@@ -51,5 +53,6 @@ export default function Footer() {
         </div>
       </div>
     </div>
+    </>
   );
 }
