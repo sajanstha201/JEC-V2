@@ -1,7 +1,15 @@
-import React from "react";
+import styled from "styled-components";
 import jecimg from "../../src/media/images/jec.png";
 
-const IntroductionSection = () => {
+const BackDivImg = styled.div`
+  background-image: url(${jecimg});
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: 100%;
+  opacity: 1;
+`;
+export const IntroductionSection = () => {
   return (
     <>
       <header>
@@ -28,5 +36,3 @@ const IntroductionSection = () => {
     </>
   );
 };
-
-export default IntroductionSection;
