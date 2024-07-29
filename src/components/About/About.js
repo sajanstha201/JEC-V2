@@ -1,3 +1,4 @@
+
 import React from 'react';
 import students from '../../images/jec-students.jpg';
 import about from '../../images/jec-about.png';
@@ -213,6 +214,7 @@ export default function About() {
             <p className="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <button href="" className="mt-[20px] border-solid border-2 border-black py-[13px] px-[32px] rounded-[10px] hover:bg-black hover:text-white transition duration-300">EMAIL</button>
           
+
           </div>
         </div>
       </div>
@@ -223,10 +225,6 @@ export default function About() {
 
 
 
-
-    </div>
-  </div>
-</div>
 
 
 

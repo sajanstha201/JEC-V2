@@ -1,20 +1,19 @@
-import AboutUniversity from "./AboutUsPage/AboutUniversity"
-import Events from "./AboutUsPage/Events"
-import Introduction from "./IntroductionSection"
-import Updates from "./Updates"
+import ImageSlider from "./ImageSlider";
+import { IntroductionSection } from "./IntroductionSection"
+import Updates from "./Updates";
+import Events from "./AboutUsPage/Events";
+import AboutUniversity from "./AboutUsPage/AboutUniversity";
 
 export const Home=()=>{
     return(
         <>
-        <Introduction/>
-   
-<div className="mx-[60px]">
-           <Updates/>
+        <IntroductionSection/>
+        <Updates/>
         <Events/>
         <AboutUniversity/>
-        </div>
+        <ImageSlider/>
         </>
         
     )
 }
-export default Home
+export default Home;
