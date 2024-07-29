@@ -11,7 +11,7 @@ export const Header = () => {
     };
 
     return (
-        <div className='absolute z-50 w-full bg-black' style={{ backgroundColor: 'rgba(0,0,0, 0.5)' }}>
+        <div className='fixed z-50 w-full bg-black backdrop-blur-sm' style={{ backgroundColor: 'rgba(0,0,0, 0.5)' }}>
             <div className='lg:w-[85%] w-full flex justify-between items-center mx-auto p-4'>
                 {/* logo section */}
                 <div>
