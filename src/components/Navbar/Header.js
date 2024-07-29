@@ -9,10 +9,10 @@ export const Header = () => {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
-
+    // style={{ backgroundColor: 'rgba(0,0,0, 0.5)' }}
     return (
-        <div className='fixed z-50 w-full bg-black backdrop-blur-sm' style={{ backgroundColor: 'rgba(0,0,0, 0.5)' }}>
-            <div className='lg:w-[85%] w-full flex justify-between items-center mx-auto p-4'>
+        <div className=' z-50 w-full bg-[#2C3A3A] backdrop-blur-sm'>
+            <div className='lg:w-[85%] w-full flex justify-between items-center mx-auto p-2'>
                 {/* logo section */}
                 <div>
                     <Link to="/"><img src={logo} className='h-20' alt="Logo" /></Link>
