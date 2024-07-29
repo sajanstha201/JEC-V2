@@ -1,4 +1,3 @@
-
 import React from 'react';
 import students from '../../images/jec-students.jpg';
 import about from '../../images/jec-about.png';
@@ -7,11 +6,6 @@ import leader from '../../images/student.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // Import the specific icon from the solid icon pack
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
-
-
-
-
-
 export default function About() {
   return (
     <>
@@ -43,7 +37,6 @@ export default function About() {
               </p>
             </div>
             <div className="md:w-5/12 w-full">
-
               <img src={students}
                 className='rounded-lg border-solid border-2 border-white shadow shadow-blue-500/40 hover:shadow-indigo-500/40 h-auto w-full sm:w-[300px] md:w-[400px] md:h-[40px] lg:w-[500px] max-w-full'
               />
@@ -51,8 +44,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-
       <div className="flex justify-center items-center mb-[30px] mt-[150px] ">
         <div
           className="w-[1100px] h-[380px] rounded-[10px] "
@@ -72,30 +63,24 @@ export default function About() {
               </div>
             </div>
           </div>
-
           <div className='container d-flex  justify-content-end '>
             <div className='row'>
               <div className='col-md-12 h-[190px] bg-blue-500 h-[190px] w-[200px]'>
                 <div className='h-[95px]'>
                   <a>
                     <h1 className='text-[20px] font-bold mt-3' style={{ fontFamily: "'Merriweather', serif" }}>Courses <br></br>Offered</h1>
-
                   </a>
                 </div>
-
                 <div className='flex d-flex align-items-end h-[95px]  '>
                   <FontAwesomeIcon icon={faArrowRightLong} className='text-[25px] mb-[45px]' />
                 </div>
               </div>
-
               <div className='col-md-12 h-[190px] bg-red-500 h-[190px] w-[200px]'>
                 <div className='h-[95px]'>
                   <a>
                     <h1 className='text-[20px] font-bold mt-3' style={{ fontFamily: "'Merriweather', serif" }}>Get an idea <br></br>about us</h1>
-
                   </a>
                 </div>
-
                 <div className='flex d-flex align-items-end h-[95px]  '>
                   <FontAwesomeIcon icon={faArrowRightLong} className='text-[25px] mb-[45px]' />
                 </div>
@@ -104,10 +89,8 @@ export default function About() {
           </div>
         </div>
       </div>
-
 <div className='container  '>
   <div className='row flex items-center justify-center h-[200px]' style={{ fontFamily: "'Merriweather', serif" }}>
-
         <div className="  col-md-3   ">
           <span className="text-center text-black">
             <h1 className="text-[40px] md:text-[70px] font-bold ">10K+</h1>
@@ -127,10 +110,7 @@ export default function About() {
           </span>
         </div>
       </div>
-
 </div>
-
-
   <div className='container h-[700px] mt-[30px] '>
     <div className='row flex justify-center ' style={{ fontFamily: "'Merriweather', serif" }}>
       <div className='col-sm-12 col-md-5 flex flex-col items-start justify-starts'>
@@ -151,7 +131,6 @@ export default function About() {
             <br/>Received
             </h1>
             </div>
-
             <div className='col-6'>
             <h1 className="text-[40px] md:text-[30px] font-bold  ">3</h1>
             <h1 className="text-[16px] md:text-[17px] mt-2 me-2  ">Textbooks
@@ -165,17 +144,13 @@ export default function About() {
             </h1>
             </div>
           </div>
-
         </div>
-        
-
       </div>
       <div className='col-sm-12 col-md-4  h-[600px] '>
               <img src={leader} className='h-[600px]'></img>
       </div>
     </div>
   </div>
-
   <div className=' mx-[5%] mb-5 h-auto'>
   <div className='mb-[50px] '>
     <h1 style={{ fontFamily: "'Merriweather', serif" }} className='text-[40px]'>Influential People</h1>
@@ -189,11 +164,9 @@ export default function About() {
             <h5 className="card-title text-[30px]" style={{ fontFamily: "'Merriweather', serif" }}>Card title</h5>
             <p className="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <button href="" className="mt-[20px] border-solid border-2 border-black py-[13px] px-[32px] rounded-[10px] hover:bg-black hover:text-white transition duration-300">EMAIL</button>
-          
           </div>
         </div>
       </div>
-
       <div className='col-12 col-md-6 col-lg-4 mb-4'>
         <div className="card mx-auto" style={{width: "100%"}}>
           <img src="..." className="card-img-top h-[250px]" alt="..."/>
@@ -201,11 +174,9 @@ export default function About() {
             <h5 className="card-title text-[30px]" style={{ fontFamily: "'Merriweather', serif" }}>Card title</h5>
             <p className="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <button href="" className="mt-[20px] border-solid border-2 border-black py-[13px] px-[32px] rounded-[10px] hover:bg-black hover:text-white transition duration-300">EMAIL</button>
-          
           </div>
         </div>
       </div>
-
       <div className='col-12 col-md-6 col-lg-4 mb-4'>
         <div className="card mx-auto" style={{width: "100%"}}>
           <img src="..." className="card-img-top h-[250px]" alt="..."/>
@@ -213,30 +184,12 @@ export default function About() {
             <h5 className="card-title text-[30px]" style={{ fontFamily: "'Merriweather', serif" }}>Card title</h5>
             <p className="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <button href="" className="mt-[20px] border-solid border-2 border-black py-[13px] px-[32px] rounded-[10px] hover:bg-black hover:text-white transition duration-300">EMAIL</button>
-          
-
           </div>
         </div>
       </div>
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
+  </div>
+</div>
     </>
   );
 }

@@ -48,9 +48,9 @@ export default function ContactForm() {
       <div className='text-center mt-3'>
         <h1 className='font-bold text-4xl'>
           <span className='text-gray-800'>SEND</span>
-          <span className='text-blue-600 ms-2'>US</span>
+          <span className='text-red-500 ms-2'>US</span>
           <span className='text-gray-800 ms-2'>AN</span>
-          <span className='text-blue-600 ms-2'>EMAIL</span>
+          <span className='text-red-500 ms-2'>EMAIL</span>
         </h1>
       </div>
       <form className='max-w-2xl mx-auto mt-1 mb-3 p-8 bg-white rounded-lg shadow-lg' onSubmit={handleSubmit}>
