@@ -1,34 +1,34 @@
 import React, { useState } from "react";
 import academic from "../../images/academic.png";
 
-const images = [
-  { src: academic, alt: "View from inside" },
-  { src: academic, alt: "Entrance" },
-  { src: academic, alt: "Public Library" },
-  { src: academic, alt: "Library Inside" },
-];
+// const images = [
+//   { src: academic, alt: "View from inside" },
+//   { src: academic, alt: "Entrance" },
+//   { src: academic, alt: "Public Library" },
+//   { src: academic, alt: "Library Inside" },
+// ];
 
 export default function AboutUniversity() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
+  // const handlePrevClick = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === 0 ? images.length - 1 : prevIndex - 1
+  //   );
+  // };
 
-  const handleNextClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  // const handleNextClick = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === images.length - 1 ? 0 : prevIndex + 1
+  //   );
+  // };
   return (
     <>
       <div className="container">
         <div className="row">
           <div className="col-md-6 col-2xl-12 col-sm-12 flex text-center h-[300px] align-items-center justify-content-center">
             <h1
-              className="text-[45px] mb-[30px] "
+              className="text-[45px] mb-[10px] "
               style={{ fontFamily: "'Merriweather', serif" }}
             >
               About University
@@ -54,7 +54,7 @@ export default function AboutUniversity() {
         </div>
       </div>
 
-      <div className="container flex justify-center items-center h-screen bg-blue-50">
+      {/* <div className="container flex justify-center items-center h-screen bg-blue-50">
         <div className="slider bg-white p-4 rounded-lg shadow-lg flex items-center">
           <button onClick={handlePrevClick} className="btn btn-primary mr-2">
             ←
@@ -73,7 +73,7 @@ export default function AboutUniversity() {
             →
           </button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

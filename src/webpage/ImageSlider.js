@@ -46,7 +46,7 @@ const ImageSlider = () => {
         </div>
       </div>
       <FaAngleLeft
-        className="fa fa-4x absolute top-1/2 transform -translate-y-1/2 right-8 text-4xl text-gray-700 bg-white bg-opacity-70 rounded-full p-2 cursor-pointer"
+        className="fa fa-4x absolute top-[70%] transform -translate-y-1/2 right-8 text-4xl text-gray-700 bg-white bg-opacity-70 rounded-full p-2 cursor-pointer"
         onClick={goToPrevious}
       />
       <FaAngleRight
