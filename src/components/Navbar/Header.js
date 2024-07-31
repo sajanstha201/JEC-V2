@@ -37,7 +37,7 @@ export const Header = () => {
                 } md:hidden w-2/5 p-4 z-40`}
             >
                 {/* Close button which closes the sliding menu bar */}
-                <div className=' top-4 right-4'>
+                <div className=' top-4 right-0'>
                     <FaTimes
                         className='text-black text-3xl cursor-pointer'
                         onClick={toggleMenu}

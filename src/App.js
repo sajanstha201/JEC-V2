@@ -6,6 +6,7 @@ import { Header } from './components/Navbar/Header';
 import Home from './webpage/Home';
 import ContactUsPage from './components/Contact/ContactUsPage';
 import Admission from './components/Admission/Admission';
+import Academics from './components/Academics/Academics';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact-us" element={<ContactUsPage/>}/>
           <Route path="/admission" element={<Admission/>}/>
+          <Route path='/academic' element={<Academics/>}/>
         </Routes>
       
         <Footer />

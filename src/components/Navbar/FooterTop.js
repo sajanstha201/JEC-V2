@@ -10,7 +10,10 @@ export class FooterTop extends Component {
                 We're here to help you to shape the future. <br/>
             </h1>
       </div>
-        <Link to='/contact-us' className=" w-[10%] mx-auto py-1 px-2 my-3 text-black text-center flex justify-center items-center border border-black hover:bg-blue-500 hover:text-white text-lg rounded-lg list-none">Contact</Link>
+      <Link 
+      to='/contact-us' 
+      className="
+         w-[20%] md:w-[13%] mx-auto py-2 px-4 my-3 text-black text-center flex justify-center items-center border border-white hover:bg-blue-500 hover:text-white text-lg rounded-lg transition-colors duration-300">Contact </Link>
       </div>
     )
   }

@@ -1,14 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Image from '../top/Image'
-import computer from '../../media/images/computer.jpg';
-import civil from '../../media/images/civil.jpg';
-import electronics from '../../media/images/electronics.jpg';
+import computer from '../../images/computer.jpg';
+import civil from '../../images/civil.jpg';
+import electronics from '../../images/electronics.jpg';
 
 export default function Academics() {
   return (
     <>
-    <Image/>
     <div>
         <h1 className='text-center  mt-[50px] font-bold text-[50px] text-blue-500'>ACADEMICS</h1>
     </div>
