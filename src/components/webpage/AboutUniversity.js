@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import academic from "../../images/academic.png";
+import academic from "../images/academic.png";
+import { Link } from 'react-router-dom';
 
 // const images = [
 //   { src: academic, alt: "View from inside" },
@@ -44,12 +45,15 @@ export default function AboutUniversity() {
               discourse, the campus is full of life and is always active with
               events and get-togethers.
             </p>
+            <Link to='/about'>
+           
             <button
               style={{ fontFamily: "'Merriweather', serif" }}
               className=" border-solid border-2 border-black text-center flex justify-content-center align-items-center p-[15px] my-4 px-4 rounded-[10px] text-[17px] "
             >
               ABOUT UNIVERSITY
             </button>
+            </Link>
           </div>
         </div>
       </div>

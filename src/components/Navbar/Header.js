@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from '../../media/images/jec-logo.png';
+import logo from '../media/images/jec-logo.png';
 
 export const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -9,9 +9,9 @@ export const Header = () => {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
-    // style={{ backgroundColor: 'rgba(0,0,0, 0.5)' }}
+
     return (
-        <div className=' z-50 w-full bg-[#2C3A3A] backdrop-blur-sm'>
+        <div className='z-50 w-full bg-[#2C3A3A] backdrop-blur-sm'>
             <div className='lg:w-[85%] w-full flex justify-between items-center mx-auto p-2'>
                 {/* logo section */}
                 <div>
@@ -20,18 +20,28 @@ export const Header = () => {
 
                 {/* menu icon which is visible on small screen */}
                 <div className='md:hidden' onClick={toggleMenu}>
-                     <FaBars className="text-white text-2xl" />
+                    <FaBars className="text-white text-2xl" />
                 </div>
 
                 {/* Lists section (visible on large screens) */}
                 <div className='hidden md:flex md:w-auto items-center justify-center md:justify-end md:mr-4'>
-                    <ul className='flex flex-row gap-5 p-2'>
+                    <ul className='flex flex-row gap-5 p-2 items-center'>
                         <li><Link to='/admission' className="text-xl text-white">Admission</Link></li>
                         <li><Link to='/about' className="text-xl text-white">About</Link></li>
-                        <li><Link to='/academic' className="text-xl text-white">Academic</Link></li>
+                        <li><Link to='/academics' className="text-xl text-white">Academic</Link></li>
                         <li><Link to='/facilities' className="text-xl text-white">Facilities</Link></li>
                         <li><Link to='/news' className="text-xl text-white">News</Link></li>
                         <li><Link to='/contact-us' className="text-xl text-white">Contact</Link></li>
+                        <li>
+                            <Link to='/onlineApply'>
+                            <button
+                                style={{ fontFamily: "'Merriweather', serif" }}
+                                className="bg-blue-500 text-white py-[15px] px-[35px] rounded-[10px] text-[16px] hover:bg-red-500 hover:text-white transition duration-300"
+                            >
+                               Apply Online
+                            </button>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -58,6 +68,14 @@ export const Header = () => {
                     <li><Link to='/facilities' className="text-xl text-black">Facilities</Link></li>
                     <li><Link to='/news' className="text-xl text-black">News</Link></li>
                     <li><Link to='/contact-us' className="text-xl text-black">Contact</Link></li>
+                    <li>
+                        <button
+                            style={{ fontFamily: "'Merriweather', serif" }}
+                            className="bg-blue-500 text-white py-[15px] px-[35px] rounded-[10px] text-[16px] hover:bg-red-500 hover:text-white transition duration-300"
+                        >
+                            Apply Online
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>

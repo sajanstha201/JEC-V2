@@ -1,5 +1,9 @@
 import React from 'react'
-import academic from '../../images/academic.png';
+import academic from '../../images/academic.png'
+import { Link } from 'react-router-dom'
+
+
+
 export default function Events() {
   return (
    <>
@@ -12,7 +16,9 @@ export default function Events() {
 
     <div className='col-md-6 col-2xl-12 col-sm-12 d-flex flex-column  md:h-[130px] h-[170px] align-items-start justify-content-center'>
     <p className='text-[18px]' style={{ fontFamily: "'Merriweather', serif" }}>At University’s beautiful campus, you’ll find a diverse and welcoming community that will teach you life skills along with having fun.</p>
+    <Link to='/exploreEvents' >
     <button  style={{ fontFamily: "'Merriweather', serif" }} className='border-solid border-2 border-black text-center flex justify-content-center align-items-center p-[15px] my-4 px-4 rounded-[10px] text-[17px] '>EXPLORE EVENTS</button>
+    </Link>
 </div>
 <div className='container-fluid'>
   <div className='row d-flex align-items-center justify-content-center'>
