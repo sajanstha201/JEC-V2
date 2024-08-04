@@ -1,8 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import logo from '../../images/jec-logo.png';
+import logo from '../images/jec-logo.png';
 import FooterTop from './FooterTop';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -26,19 +27,22 @@ export default function Footer() {
           <div className='w-full md:w-1/4 px-4 mb-4 mt-3'>
             <h1 className='text-[30px] text-center'>Useful Links</h1> 
             <div className='text-center flex flex-col gap-3 mt-3'>
-              <a href='#'>Admission</a>
-              <a href='#'>Requirements</a>
-              <a href='#'>Academic Calendar</a>
+               <a href='#'>home</a>
+               <Link to='/admission'><a href='#'>Admission</a></Link>
+                <Link to=''><a href='#'>Requirements</a></Link> 
+                <Link to='/contact-us'><a href='#'>Contact Us</a></Link>
+                <Link to='/privacypolicy'><a href='#'>Privacy Policy</a></Link>
             </div>
           </div>
 
           <div className='w-full md:w-1/4 px-4 mb-4  mt-3 flex-column justify-content-center align-items-center '>
             <h1 className='text-[30px] text-center'>Our University</h1>
             <div className='text-center flex flex-col gap-3 mt-3'>
-              <a href='#'>About Us</a>
-              <a href='#'>Facilities</a>
-              <a href='#'>Academic</a>
-              <a href='#'>Contact Us</a>
+              <Link to='/about'><a href='#'>About Us</a></Link>
+              <Link to='/facilities'> <a href='#'>Facilities</a></Link>
+              <Link to='/academics'><a href='#'>Academic</a></Link>
+              <Link to='/news'>  <a href='#'>News</a></Link>
+            
             </div>
           </div>
 

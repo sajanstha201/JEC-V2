@@ -1,8 +1,8 @@
 import ImageSlider from "./ImageSlider";
 import { IntroductionSection } from "./IntroductionSection"
 import Updates from "./Updates";
-import Events from "./AboutUsPage/Events";
-import AboutUniversity from "./AboutUsPage/AboutUniversity";
+import Events from './Events/Events'
+import AboutUniversity from "./AboutUniversity";
 
 export const Home=()=>{
     return(

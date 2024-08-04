@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import namaste from '../../media/images/namaste.jfif';
+
+import namaste from '../images/namaste.jfif';
 
 export default function Chatbot() {
   const [isChatbotVisible, setIsChatbotVisible] = useState(false);
@@ -44,7 +45,7 @@ export default function Chatbot() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center fixed bottom-0 right-0 mb-6 h-[300px] mr-0 md:mr-[20px] transition-transform transform hover:scale-105">
+      <div className="flex flex-col items-center z-50 justify-center fixed bottom-0 right-0 mb-6 h-[300px] mr-0 md:mr-[20px] transition-transform transform hover:scale-105">
         <div>
           <img src={namaste} className="w-[150px] h-[150px] rounded-full shadow-lg" alt="Chatbot Icon" />
         </div>
@@ -61,8 +62,8 @@ export default function Chatbot() {
       </div>
 
       {isChatbotVisible && (
-        <div className="flex flex-col fixed bottom-0 right-0 mr-3 mb-7 h-[500px] border-2 border-gray-300 rounded-lg w-[400px] bg-white shadow-xl transition-transform transform scale-100">
-          <div className="flex justify-between items-center bg-[#43a6d0] p-3 rounded-t-lg h-[70px] shadow-md">
+        <div className="flex flex-col z-50 fixed bottom-0 right-0 mr-3 mb-7 h-[500px] border-2 border-gray-300 rounded-lg w-[400px] bg-white shadow-xl transition-transform transform scale-100">
+          <div className="flex  justify-between items-center bg-[#43a6d0] p-3 rounded-t-lg h-[70px] shadow-md">
             <h1 className="font-bold text-[20px] text-white">CHAT WITH JANAKI</h1>
             <button
               type="button"
