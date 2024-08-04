@@ -46,8 +46,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-
       <div className="flex justify-center items-center mb-[30px] mt-[150px] ">
         <div
           className="w-[1100px] h-[380px] rounded-[10px] "
@@ -67,30 +65,24 @@ export default function About() {
               </div>
             </div>
           </div>
-
           <div className='container d-flex  justify-content-end '>
             <div className='row'>
               <div className='col-md-12 h-[190px] bg-blue-500 h-[190px] w-[200px]'>
                 <div className='h-[95px]'>
                   <a>
                     <h1 className='text-[20px] font-bold mt-3' style={{ fontFamily: "'Merriweather', serif" }}>Courses <br></br>Offered</h1>
-
                   </a>
                 </div>
-
                 <div className='flex d-flex align-items-end h-[95px]  '>
                   <FontAwesomeIcon icon={faArrowRightLong} className='text-[25px] mb-[45px]' />
                 </div>
               </div>
-
               <div className='col-md-12 h-[190px] bg-red-500 h-[190px] w-[200px]'>
                 <div className='h-[95px]'>
                   <a>
                     <h1 className='text-[20px] font-bold mt-3' style={{ fontFamily: "'Merriweather', serif" }}>Get an idea <br></br>about us</h1>
-
                   </a>
                 </div>
-
                 <div className='flex d-flex align-items-end h-[95px]  '>
                   <FontAwesomeIcon icon={faArrowRightLong} className='text-[25px] mb-[45px]' />
                 </div>
@@ -99,10 +91,8 @@ export default function About() {
           {/* // </div> */}
         </div>
       </div>
-
 <div className='container  '>
   <div className='row flex items-center justify-center h-[200px]' style={{ fontFamily: "'Merriweather', serif" }}>
-
         <div className="  col-md-3   ">
           <span className="text-center text-black">
             <h1 className="text-[40px] md:text-[70px] font-bold ">10K+</h1>
@@ -122,7 +112,6 @@ export default function About() {
           </span>
         </div>
       </div>
-
 </div>
 
       <div className='container mt-12'>

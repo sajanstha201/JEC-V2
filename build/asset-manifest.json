@@ -9,6 +9,7 @@
     "main.js": "/JEC-V2/static/js/main.9cf44a84.js",
     "static/js/453.ed3810f9.chunk.js": "/JEC-V2/static/js/453.ed3810f9.chunk.js",
     "static/media/jec.png": "/JEC-V2/static/media/jec.7218cef3d1cb87df1b4c.png",
+    "static/media/jec-about.png": "/JEC-V2/static/media/jec-about.9b474afc330b95fa309d.png",
     "static/media/electronics.jpg": "/JEC-V2/static/media/electronics.058ce2e85fb92a92d725.jpg",
 >>>>>>> c1656d3b674cbdae98cedb5585d9ce3de92073d6
     "static/media/academic.png": "/JEC-V2/static/media/academic.755e41b19e50af1da053.png",
@@ -28,7 +29,7 @@
     "static/media/civil.jpg": "/JEC-V2/static/media/civil.b3beb888742908be92e1.jpg",
     "static/media/intenship.png": "/JEC-V2/static/media/intenship.520d3a7ba90c00c4fa8f.png",
     "index.html": "/JEC-V2/index.html",
-    "main.9cf44a84.js.map": "/JEC-V2/static/js/main.9cf44a84.js.map",
+    "main.71acef0d.js.map": "/JEC-V2/static/js/main.71acef0d.js.map",
     "453.ed3810f9.chunk.js.map": "/JEC-V2/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
