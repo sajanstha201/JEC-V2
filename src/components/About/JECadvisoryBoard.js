@@ -50,7 +50,7 @@ export class JECadvisoryBoard extends Component {
     ];
 
     return (
-      <div className='w-[94%] mx-auto'>
+      <div className='w-[90%] mx-auto'>
         <h1 className='text-[45px] my-5 text-red-500 flex justify-center items-center text-center' style={{ fontFamily: "'Merriweather', serif" }}>Advisior Board</h1>
         <div className='mt-6 md:mt-10'>
                     <div className='flex flex-col md:flex-row items-center justify-between'>
