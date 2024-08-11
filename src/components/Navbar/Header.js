@@ -31,7 +31,7 @@ export const Header = () => {
                     )}
                 </div>
                 {/* Lists section */}
-                <div className={`${menuOpen ? 'block' : 'hidden'} md:flex items-center w-full md:w-auto`}>
+                <div className='hidden md:flex items-center w-full md:w-auto'>
                     <ul className='flex flex-col md:flex-row gap-5 p-2'>
                         {/* AboutUs with Dropdown */}
                         <li className="relative">
@@ -42,18 +42,16 @@ export const Header = () => {
                                 AboutUs
                             </button>
                             {isDropdownOpen && (
-                                <ul className="md:absolute left-0 mt-2 w-48 bg-gray-800 text-white rounded-lg shadow-lg">
-                                    <li><Link to="/about/introduction" className="block px-4 py-2 hover:bg-gray-700">Introduction</Link></li>
-                                    <li><Link to="/about/facilities" className="block px-4 py-2 hover:bg-gray-700">Facilities</Link></li>
-                                    <li><Link to="/about/courses-offered" className="block px-4 py-2 hover:bg-gray-700">Courses Offered</Link></li>
-                                    <li><Link to="/about/jec-advisory-board" className="block px-4 py-2 hover:bg-gray-700">JEC Advisory Board</Link></li>
+                                <ul className="md:absolute left-0 my-2 w-60 bg-white text-black rounded-lg shadow-lg">
+                                    <li><Link to="/about/introduction" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 text-lg rounded-t-lg">Introduction</Link></li>
+                                    <li><Link to="/about/courses-offered" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 text-lg">Courses Offered</Link></li>
+                                    <li><Link to="/about/jec-advisory-board" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 text-lg rounded-b-lg">JEC Advisory Board</Link></li>
                                 </ul>
                             )}
                         </li>
-                        {/* <li><Link to='/academics' className="text-xl text-white hover:text-gray-300 transition duration-300">Academic</Link></li> */}
                         <li><Link to='/admission' className="text-xl text-white hover:text-gray-300 transition duration-300">Requirements</Link></li>
                         <li><Link to='/facilities' className="text-xl text-white hover:text-gray-300 transition duration-300">Facilities</Link></li>
-                        <li><Link to='/news' className="text-xl text-white hover:text-gray-300 transition duration-300">News</Link></li>
+                        <li><Link to='/news' className="text-xl text-white hover:text-gray-300 transition duration-300">News & Updates</Link></li>
                         <li><Link to='/contact-us' className="text-xl text-white hover:text-gray-300 transition duration-300">Contact</Link></li>
                     </ul>
                     <Link to='/onlineApply'>
@@ -65,15 +63,43 @@ export const Header = () => {
                     </Link>
                 </div>
             </div>
-            {/* Hidden Menu for small screens */}
-            <div className={`${menuOpen ? 'block' : 'hidden'} md:hidden w-full bg-blue-900 p-2`}>
-                <ul className='flex flex-col gap-5'>
-                    <li><Link to='/about' className="text-xl text-white hover:text-gray-300 transition duration-300">AboutUs</Link></li>
-                    <li><Link to='/academics' className="text-xl text-white hover:text-gray-300 transition duration-300">Academic</Link></li>
+            {/* Sliding Menu for small screens */}
+            <div className={`fixed top-0 right-0 h-full bg-blue-900 z-50 transition-transform transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'} w-64 md:hidden`}>
+                <div className="flex justify-end p-4">
+                    <FaTimes 
+                        className="text-white text-3xl cursor-pointer hover:text-gray-300" 
+                        onClick={toggleMenu} 
+                        aria-label="Close menu" 
+                    />
+                </div>
+                <ul className='flex flex-col gap-5 p-5 mt-10'>
+                    <li>
+                        <button 
+                            onClick={toggleDropdown} 
+                            className="text-xl text-white hover:text-gray-300 transition duration-300"
+                        >
+                            AboutUs
+                        </button>
+                        {isDropdownOpen && (
+                            <ul className="mt-2 bg-white text-black rounded-lg shadow-lg">
+                                <li><Link to="/about/introduction" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 rounded-t-lg">Introduction</Link></li>
+                                <li><Link to="/about/courses-offered" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800">Courses Offered</Link></li>
+                                <li><Link to="/about/jec-advisory-board" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 rounded-b-lg">JEC Advisory Board</Link></li>
+                            </ul>
+                        )}
+                    </li>
                     <li><Link to='/admission' className="text-xl text-white hover:text-gray-300 transition duration-300">Requirements</Link></li>
-                    <li><Link to='/facilities' className="text-xl text-white hover:text-gray-300 transition duration-300">Facilities</Link></li>
-                    <li><Link to='/news' className="text-xl text-white hover:text-gray-300 transition duration-300">News</Link></li>
+                    <li><Link to='/news' className="text-xl text-white hover:text-gray-300 transition duration-300">News & Updates</Link></li>
                     <li><Link to='/contact-us' className="text-xl text-white hover:text-gray-300 transition duration-300">Contact</Link></li>
+                    <li>
+                        <Link to='/onlineApply'>
+                            <button
+                                className="bg-blue-600 text-white py-2 px-4 rounded-lg text-sm md:text-base shadow-md hover:bg-blue-700 hover:shadow-lg transition duration-300 focus:outline-none"
+                            >
+                                Apply Online
+                            </button>
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </div>
