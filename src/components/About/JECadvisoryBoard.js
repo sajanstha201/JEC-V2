@@ -50,9 +50,27 @@ export class JECadvisoryBoard extends Component {
     ];
 
     return (
-      <>
+      <div className='w-[94%] mx-auto'>
         <h1 className='text-[45px] my-5 text-red-500 flex justify-center items-center text-center' style={{ fontFamily: "'Merriweather', serif" }}>Advisior Board</h1>
-        <div className='w-[94%] mx-auto text-xl font-[16px] leading-relaxed text-slate-700'>
+        <div className='mt-6 md:mt-10'>
+                    <div className='flex flex-col md:flex-row items-center justify-between'>
+                       <div>
+                         <p>
+                            The Janakpur Engineering College Advisory Board is a prestigious group of industry experts who provide valuable guidance and support to our institution. Comprised of leading professionals from a range of fields, the Advisory Board is committed to helping JEC maintain its position as the nation's premier engineering program.
+                        </p>
+                        <br />
+                        <p>
+                            Through their expertise and insights, the Advisory Board helps JEC to develop innovative academic programs and research initiatives that meet the evolving needs of society. By working closely with the principal, faculty, and students, the Board helps to identify new opportunities and partnerships that will enable JEC to continue to provide the highest standard of education to our students.
+                        </p>
+                        <br />
+                        <p>
+                            At JEC, we are grateful for the contributions of our Advisory Board members, who help us to achieve our mission of preparing the next generation of engineering leaders. Through their dedication and expertise, our Advisory Board members play a vital role in ensuring that JEC remains at the forefront of engineering education and research.
+                        </p>
+                       </div>
+                        <img src={imgadv} className='mt-6 md:mt-0 md:ml-6 h-[200px] w-full md:w-1/2 rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105' alt="Teachers" />
+                    </div>
+                </div>
+        {/* <div className='w-[94%] mx-auto text-xl font-[16px] leading-relaxed text-slate-700'>
             <p>
                 The Janakpur Engineering College Advisory Board is a prestigious group of industry experts who provide valuable guidance and support to our institution. Comprised of leading professionals from a range of fields, the Advisory Board is committed to helping JEC maintain its position as the nation's premier engineering program.
             </p>
@@ -64,10 +82,10 @@ export class JECadvisoryBoard extends Component {
             <p>
                 At JEC, we are grateful for the contributions of our Advisory Board members, who help us to achieve our mission of preparing the next generation of engineering leaders. Through their dedication and expertise, our Advisory Board members play a vital role in ensuring that JEC remains at the forefront of engineering education and research.
             </p>
-        </div>
+        </div> */}
 
         {/* cards for the advisory member */}
-        <div className='advisory-container'>
+        <div className='advisory-container my-5'>
           <div className='row'>
             {advisorymemberdata.map((advisorymember) => (
               <div key={advisorymember.id} className='col-12 col-md-6 col-lg-4 mb-4'>
@@ -84,7 +102,7 @@ export class JECadvisoryBoard extends Component {
             ))}
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }
