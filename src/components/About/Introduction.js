@@ -133,59 +133,110 @@ export default function Introduction() {
         </div>
       </div>
 
-      <div className='container mt-12'>
-        <div className='flex flex-col lg:flex-row items-center'>
-          <div className='lg:w-1/2 p-4'>
-            <h1 className='text-3xl font-bold text-blue-600 mb-4 transition-transform transform hover:scale-105'>Meet our Principle</h1>
-            <p className='mb-6 text-gray-700'>
-              Emma J Coleman is the first President and founder of University. She is one of the most influential leaders in the field of education with experience spanning decades. She is now looking over the overall functioning of University and also acts as the head of the Department of Humanities.
-            </p>
-            <div className='grid grid-cols-2 gap-6'>
-              <div className='text-center transition-transform transform hover:scale-105' ref={countersRef.researchPapers}>
-                <h1 className="text-4xl font-bold text-blue-600">
-                  {countersInView.researchPapers ? <CountUp end={37} duration={2} /> : '0'}
-                </h1>
-                <h2 className="text-lg mt-2">Research Papers<br />Published</h2>
-              </div>
-              <div className='text-center transition-transform transform hover:scale-105' ref={countersRef.researchGrants}>
-                <h1 className="text-4xl font-bold text-blue-600">
-                  {countersInView.researchGrants ? <CountUp end={7} duration={2} /> : '0'}
-                </h1>
-                <h2 className="text-lg mt-2">Research Grants<br />Received</h2>
-              </div>
-              <div className='text-center transition-transform transform hover:scale-105' ref={countersRef.textbooks}>
-                <h1 className="text-4xl font-bold text-blue-600">
-                  {countersInView.textbooks ? <CountUp end={3} duration={2} /> : '0'}
-                </h1>
-                <h2 className="text-lg mt-2">Textbooks<br />Published</h2>
-              </div>
-              <div className='text-center transition-transform transform hover:scale-105' ref={countersRef.awards}>
-                <h1 className="text-4xl font-bold text-blue-600">
-                  {countersInView.awards ? <CountUp end={23} duration={2} /> : '0'}
-                </h1>
-                <h2 className="text-lg mt-2">Awards &<br />Recognitions</h2>
-              </div>
-            </div>
-          </div>
-          <div className='lg:w-1/2 p-4'>
-            <img src className='w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105' alt="President" />
-          </div>
-        </div>
-      </div>
+
+<div className='container'>
+  <div className='row'>
+    <div className='col-6'>
+    <div className='flex flex-col lg:flex-row gap-12'>
+ 
+ <div className='lg:w-1/2 p-4'>
+   <h1 className='text-3xl font-bold text-blue-600 mb-4 transition-transform transform hover:scale-105'>Meet Our Principle</h1>
+   <p className='mb-6 text-gray-700'>
+     Emma J Coleman is the first President and founder of University. She is one of the most influential leaders in the field of education with experience spanning decades. She is now looking over the overall functioning of University and also acts as the head of the Department of Humanities.
+   </p>
+   <div className='grid grid-cols-2 gap-6'>
+     <div className='text-center transition-transform transform hover:scale-105' ref={countersRef.researchPapers}>
+       <h1 className="text-4xl font-bold text-blue-600">
+         {countersInView.researchPapers ? <CountUp end={37} duration={2} /> : '0'}
+       </h1>
+       <h2 className="text-lg mt-2">Research Papers<br />Published</h2>
+     </div>
+     <div className='text-center transition-transform transform hover:scale-105' ref={countersRef.researchGrants}>
+       <h1 className="text-4xl font-bold text-blue-600">
+         {countersInView.researchGrants ? <CountUp end={7} duration={2} /> : '0'}
+       </h1>
+       <h2 className="text-lg mt-2">Research Grants<br />Received</h2>
+     </div>
+     <div className='text-center transition-transform transform hover:scale-105' ref={countersRef.textbooks}>
+       <h1 className="text-4xl font-bold text-blue-600">
+         {countersInView.textbooks ? <CountUp end={3} duration={2} /> : '0'}
+       </h1>
+       <h2 className="text-lg mt-2">Textbooks<br />Published</h2>
+     </div>
+     <div className='text-center transition-transform transform hover:scale-105' ref={countersRef.awards}>
+       <h1 className="text-4xl font-bold text-blue-600">
+         {countersInView.awards ? <CountUp end={23} duration={2} /> : '0'}
+       </h1>
+       <h2 className="text-lg mt-2">Awards &<br />Recognitions</h2>
+     </div>
+   </div>
+ </div>
+ {/* Image Section */}
+ <div className='lg:w-1/2 p-4'>
+  <img 
+    src={leader} 
+    className='w-full h-auto rounded-lg shadow-2xl transition-transform transform hover:scale-105 hover:shadow-xl' 
+    alt="President" 
+  />
+</div>
+</div>
+
+    </div>
+    <div className='col-6'>
+    <div className='flex flex-col lg:flex-row gap-12'>
+ 
+ <div className='lg:w-1/2 p-4'>
+   <h1 className='text-3xl font-bold text-blue-600 mb-4 transition-transform transform hover:scale-105'>Meet Our President</h1>
+   <p className='mb-6 text-gray-700'>
+     Emma J Coleman is the first President and founder of University. She is one of the most influential leaders in the field of education with experience spanning decades. She is now looking over the overall functioning of University and also acts as the head of the Department of Humanities.
+   </p>
+   <div className='grid grid-cols-2 gap-6'>
+     <div className='text-center transition-transform transform hover:scale-105' ref={countersRef.researchPapers}>
+       <h1 className="text-4xl font-bold text-blue-600">
+         {countersInView.researchPapers ? <CountUp end={37} duration={2} /> : '0'}
+       </h1>
+       <h2 className="text-lg mt-2">Research Papers<br />Published</h2>
+     </div>
+     <div className='text-center transition-transform transform hover:scale-105' ref={countersRef.researchGrants}>
+       <h1 className="text-4xl font-bold text-blue-600">
+         {countersInView.researchGrants ? <CountUp end={7} duration={2} /> : '0'}
+       </h1>
+       <h2 className="text-lg mt-2">Research Grants<br />Received</h2>
+     </div>
+     <div className='text-center transition-transform transform hover:scale-105' ref={countersRef.textbooks}>
+       <h1 className="text-4xl font-bold text-blue-600">
+         {countersInView.textbooks ? <CountUp end={3} duration={2} /> : '0'}
+       </h1>
+       <h2 className="text-lg mt-2">Textbooks<br />Published</h2>
+     </div>
+     <div className='text-center transition-transform transform hover:scale-105' ref={countersRef.awards}>
+       <h1 className="text-4xl font-bold text-blue-600">
+         {countersInView.awards ? <CountUp end={23} duration={2} /> : '0'}
+       </h1>
+       <h2 className="text-lg mt-2">Awards &<br />Recognitions</h2>
+     </div>
+   </div>
+ </div>
+ {/* Image Section */}
+ <div className='lg:w-1/2 p-4'>
+  <img 
+    src={leader} 
+    className='w-full h-auto rounded-lg shadow-2xl transition-transform transform hover:scale-105 hover:shadow-xl' 
+    alt="President" 
+  />
+</div>
+
+</div>
+
+    </div>
+  </div>
+</div>
+
+
 
       <div className='container mt-12 mb-12'>
-        <h1 className='text-3xl font-semibold mb-6 text-blue-600'>fACULTYS</h1>
+        <h1 className='text-3xl font-semibold mb-6 text-blue-600'>FACULTY</h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-        <div className="card mx-auto transition-transform transform h-[380px] w-[330px] hover:scale-105">
-            <img src="..." className="card-img-top h-64 object-cover" alt="..." />
-            <div className="card-body">
-              <h5 className="card-title text-2xl font-semibold text-blue-600">Card title</h5>
-              <p className="text-gray-700">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">LEARN MORE</button>
-            </div>
-          </div>
-
-
           <div className="card mx-auto transition-transform transform h-[380px] w-[330px] hover:scale-105">
             <img src="..." className="card-img-top h-64 object-cover" alt="..." />
             <div className="card-body">
@@ -194,7 +245,6 @@ export default function Introduction() {
               <button className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">LEARN MORE</button>
             </div>
           </div>
-
           <div className="card mx-auto transition-transform transform h-[380px] w-[330px] hover:scale-105">
             <img src="..." className="card-img-top h-64 object-cover" alt="..." />
             <div className="card-body">
@@ -203,11 +253,16 @@ export default function Introduction() {
               <button className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">LEARN MORE</button>
             </div>
           </div>
-
+          <div className="card mx-auto transition-transform transform h-[380px] w-[330px] hover:scale-105">
+            <img src="..." className="card-img-top h-64 object-cover" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title text-2xl font-semibold text-blue-600">Card title</h5>
+              <p className="text-gray-700">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <button className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">LEARN MORE</button>
+            </div>
+          </div>
         </div>
       </div>
-
-     
     </>
   );
 }
