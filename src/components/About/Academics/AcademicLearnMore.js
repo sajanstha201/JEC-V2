@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import people from '../images/people.png';
-import clock from '../images/clock.png';
-import report from '../images/report.png';
+import people from '../../images/people.png';
+import clock from '../../images/clock.png';
+import report from '../../images/report.png';
 
 export default function AcademicLearnMore() {
   return (
