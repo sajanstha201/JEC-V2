@@ -19,6 +19,7 @@ import PrivacyPolicy from './components/Privacy Policy/PrivacyPolicy';
 import Admission from './components/Admission/Admission';
 import Introduction from './components/About/Introduction';
 import JECadvisory from './components/About/JECadvisoryBoard';
+import Teachers from './components/About/Teachers';
 function App() {
   return (
     <HashRouter>
@@ -41,6 +42,7 @@ function App() {
           <Route path="/admission" element={<Admission/>}/>
           <Route path='/about/introduction' element={<Introduction/>}/>
           <Route path='/about/jec-advisory-board' element={<JECadvisory/>}/>
+          <Route path="/teachers" element={<Teachers/>}/>
         </Routes>
       
         <Footer />
