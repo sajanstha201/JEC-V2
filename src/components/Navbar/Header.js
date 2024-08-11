@@ -61,7 +61,7 @@ export const Header = () => {
                                 AboutUs
                             </button>
                             {isDropdownOpen && (
-                                <ul className="md:absolute left-0 my-2 w-60 bg-white text-black rounded-lg shadow-lg z-20">
+                                <ul className="md:absolute left-0 my-2 w-60 bg-white text-black rounded-lg shadow-lg z-20 border-t-4 border-blue-500">
                                     <li><Link to="/about/introduction" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 text-lg rounded-t-lg">Introduction</Link></li>
                                     <li><Link to="/about/courses-offered" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 text-lg">Courses Offered</Link></li>
                                     <li><Link to="/about/jec-advisory-board" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 text-lg rounded-b-lg">JEC Advisory Board</Link></li>
