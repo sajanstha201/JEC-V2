@@ -1,18 +1,30 @@
 import React, { useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import uni1 from "../images/academic.png";
-import uni2 from "../images/computer.jpg";
-import uni3 from "../images/electronics.jpg";
-import uni4 from "../images/intenship.png";
-import uni5 from "../images/civil.jpg";
+import computer from '../images/computer.jpg';
+import civil from '../images/civil.jpg';
+import electronics from '../images/electronics.jpg';
 
 const ImageSlider = () => {
   const images = [
-    { src: uni1, alt: "View from inside", title: "View from inside" },
-    { src: uni2, alt: "Entrance", title: "Entrance" },
-    { src: uni3, alt: "Public Library", title: "Public Library" },
-    { src: uni4, alt: "Library Inside", title: "Library Inside" },
-    { src: uni5, alt: "Class", title: "Class" },
+    {
+      src: computer,
+      alt: "View from inside",
+      title: "View from inside",
+      details: "Starting in Fall 2022 Python Programming for Data Science Online 4 Year Course"
+    },
+    {
+      src: civil,
+      alt: "Entrance",
+      title: "Entrance",
+      details: "Starting in Spring 2022 Analyzing Data Without Excel Online 4 Year Course"
+    },
+    {
+      src: electronics,
+      alt: "Public Library",
+      title: "Public Library",
+      details: "Starting in Fall 2022 Databases: Advanced Topics in SQL Online & Offline 4 Year Course"
+    },
+   
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,14 +45,15 @@ const ImageSlider = () => {
     <div className="relative w-11/12 mx-auto overflow-hidden max-w-[90%] my-8">
       <div className="grid grid-cols-5 gap-4">
         {images.map((image, index) => (
-          <div key={index} className="relative">
+          <div key={index} className="relative border rounded-lg shadow-md">
             <img
-              className="w-full h-64 object-cover rounded-lg"
+              className="w-full h-64 object-cover rounded-t-lg"
               src={image.src}
               alt={image.alt}
             />
-            <div className="absolute bottom-0 left-0 w-full p-2 bg-white bg-opacity-70 text-center text-gray-700 text-sm">
-              {image.title}
+            <div className="p-4">
+              <h3 className="text-lg font-bold text-gray-800 mb-2">{image.title}</h3>
+              <p className="text-gray-600 text-sm">{image.details}</p>
             </div>
           </div>
         ))}

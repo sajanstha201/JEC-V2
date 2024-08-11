@@ -1,28 +1,10 @@
 import React, { useState } from "react";
-import academic from "../images/academic.png";
 import { Link } from 'react-router-dom';
 
-// const images = [
-//   { src: academic, alt: "View from inside" },
-//   { src: academic, alt: "Entrance" },
-//   { src: academic, alt: "Public Library" },
-//   { src: academic, alt: "Library Inside" },
-// ];
+
 
 export default function AboutUniversity() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // const handlePrevClick = () => {
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex === 0 ? images.length - 1 : prevIndex - 1
-  //   );
-  // };
-
-  // const handleNextClick = () => {
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex === images.length - 1 ? 0 : prevIndex + 1
-  //   );
-  // };
+  
   return (
     <>
       <div className="container">
@@ -58,26 +40,7 @@ export default function AboutUniversity() {
         </div>
       </div>
 
-      {/* <div className="container flex justify-center items-center h-screen bg-blue-50">
-        <div className="slider bg-white p-4 rounded-lg shadow-lg flex items-center">
-          <button onClick={handlePrevClick} className="btn btn-primary mr-2">
-            ←
-          </button>
-          <div className="slider-content text-center">
-            <img
-              src={images[currentIndex].src}
-              alt={images[currentIndex].alt}
-              className="w-80 h-60 object-cover rounded-md"
-            />
-            <p className="mt-2 text-lg font-semibold">
-              {images[currentIndex].alt}
-            </p>
-          </div>
-          <button onClick={handleNextClick} className="btn btn-primary ml-2">
-            →
-          </button>
-        </div>
-      </div> */}
+ 
     </>
   );
 }
