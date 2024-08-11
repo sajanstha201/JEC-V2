@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
-
+import learnMore from './AcademicLearnMore'; // Corrected import
 import computer from '../../images/computer.jpg';
 import civil from '../../images/civil.jpg';
 import electronics from '../../images/electronics.jpg';
-import learnmore from '../../images/aLearnmore.png';
+import learnMoreImage from '../../images/aLearnmore.png';
 
 // Example course data
 const coursesData = [
-  { img: computer, title: 'Bachelor of Computer Engineering (BCE)', description: 'Detailed description about Computer Engineering.', route: '/alearnmore' },
-  { img: civil, title: 'Bachelor of Civil Engineering (BCT)', description: 'Detailed description about Civil Engineering.', route: '/alearnmore' },
-  { img: electronics, title: 'Bachelor of Electronics and Information Engineering (BEI)', description: 'Detailed description about Electronics and Information Engineering.', route: '/alearnmore' }
+  { img: computer, title: 'Bachelor of Computer Engineering (BCE)', description: 'Detailed description about Computer Engineering.', route: '/alearnmore', link: '/alearnmore' },
+  { img: civil, title: 'Bachelor of Civil Engineering (BCT)', description: 'Detailed description about Civil Engineering.', route: '/alearnmore', link: '/alearnmore' },
+  { img: electronics, title: 'Bachelor of Electronics and Information Engineering (BEI)', description: 'Detailed description about Electronics and Information Engineering.', route: '/alearnmore', link: '/alearnmore' }
 ];
 
 export default function Academics() {
@@ -69,7 +69,7 @@ export default function Academics() {
             </div>
 
             <div className='col-sm-12 col-md-6 flex items-end justify-end'>
-              <img src={learnmore} className='h-[220px] transition-transform transform hover:scale-105' alt="Learn More" />
+              <img src={learnMoreImage} className='h-[220px] transition-transform transform hover:scale-105' alt="Learn More" />
             </div>
           </div>
         </div>
@@ -98,37 +98,29 @@ export default function Academics() {
           <h1 style={{ fontFamily: "'Merriweather', serif", color: '#D80027' }} className='text-[45px]'>Courses Offered</h1>
         </div>
         <div className='container-fluid mb-5'>
-          <div className='row'>
-            {coursesData.map((course, index) => (
-              <div key={index} className='col-12 col-md-6 col-lg-4 mb-4'>
-                <div
-                  className="card mx-auto transform transition-transform hover:scale-105 hover:shadow-xl"
-                  style={{ width: "100%", border: "1px solid #e0e0e0", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", cursor: 'pointer' }}
-                  onClick={() => openModal(course)}
-                >
-                  <img src={course.img} className="card-img-top transition-transform transform hover:scale-110" style={{ height: "200px", objectFit: "cover" }} alt={course.title} />
-                  <div className="card-body">
-                    <h5 className="card-title" style={{ fontFamily: "'Merriweather', serif", fontSize: "20px", color: '#003366' }}>{course.title}</h5>
-                    <p style={{ fontSize: "14px", color: "#757575" }}>Starting in Fall 2022</p>
-                    <h1 style={{ fontSize: "16px", fontWeight: "normal" }}>Duration: 4 Years</h1>
-                  </div>
-                </div>
-              </div>
-            ))}
+  <div className='d-flex flex-wrap justify-content-between' style={{ gap: '20px' }}>
+    {coursesData.map((course, index) => (
+      <Link to={course.link} key={index} style={{ flex: '1 1 calc(33.333% - 20px)', marginBottom: '20px' }}>
+        <div
+          className="card transform transition-transform hover:scale-105 hover:shadow-xl"
+          style={{ border: "1px solid #e0e0e0", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", cursor: 'pointer', height: '100%' }}
+          onClick={() => openModal(course)}
+        >
+          <img src={course.img} className="card-img-top transition-transform transform hover:scale-110" style={{ height: "200px", objectFit: "cover" }} alt={course.title} />
+          <div className="card-body">
+            <h5 className="card-title" style={{ fontFamily: "'Merriweather', serif", fontSize: "20px", color: '#003366' }}>{course.title}</h5>
+            <p style={{ fontSize: "14px", color: "#757575" }}>Starting in Fall 2022</p>
+            <h1 style={{ fontSize: "16px", fontWeight: "normal" }}>Duration: 4 Years</h1>
           </div>
         </div>
-      </div>
+      </Link>
+    ))}
+  </div>
+</div>
 
-      {/* Simple Modal for detailed course information */}
-      {modalIsOpen && (
-        <div className="modal-overlay" style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0, 0, 0, 0.5)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div className="modal-content" style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '8px', width: '80%', maxWidth: '600px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}>
-            <h2>{selectedCourse?.title}</h2>
-            <p>{selectedCourse?.description}</p>
-            <button onClick={closeModal} style={{ backgroundColor: '#D80027', color: '#fff', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer', transition: 'background-color 0.3s' }}>Close</button>
-          </div>
-        </div>
-      )}
+
+
+      </div>
     </>
   );
 }
