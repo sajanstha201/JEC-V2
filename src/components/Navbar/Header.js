@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../media/images/jec-logo.png';
@@ -6,6 +6,7 @@ import logo from '../media/images/jec-logo.png';
 export const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const dropdownRef = useRef(null);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -14,6 +15,24 @@ export const Header = () => {
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
+
+    const handleOutsideClick = (e) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+            setIsDropdownOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        if (isDropdownOpen) {
+            document.addEventListener('mousedown', handleOutsideClick);
+        } else {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
+    }, [isDropdownOpen]);
 
     return (
         <div className='z-50 w-full bg-blue-900' style={{ fontFamily: "'Merriweather', serif" }}>
@@ -34,10 +53,10 @@ export const Header = () => {
                 <div className='hidden md:flex items-center w-full md:w-auto'>
                     <ul className='flex flex-col md:flex-row gap-5 p-2'>
                         {/* AboutUs with Dropdown */}
-                        <li className="relative">
+                        <li className="relative" ref={dropdownRef}>
                             <button 
                                 onClick={toggleDropdown} 
-                                className="text-xl text-white hover:text-gray-300 transition duration-300"
+                                className="text-xl text-white hover:text-gray-300 transition duration-300 border-none"
                             >
                                 AboutUs
                             </button>
@@ -49,7 +68,7 @@ export const Header = () => {
                                 </ul>
                             )}
                         </li>
-                        <li><Link to='/admission' className="text-xl text-white hover:text-gray-300 transition duration-300">Requirements</Link></li>
+                        <li><Link to='/admission' className="text-xl text-white hover:text-gray-300 transition duration-300">Admission</Link></li>
                         <li><Link to='/facilities' className="text-xl text-white hover:text-gray-300 transition duration-300">Facilities</Link></li>
                         <li><Link to='/news' className="text-xl text-white hover:text-gray-300 transition duration-300">News & Updates</Link></li>
                         <li><Link to='/contact-us' className="text-xl text-white hover:text-gray-300 transition duration-300">Contact</Link></li>
@@ -76,7 +95,7 @@ export const Header = () => {
                     <li>
                         <button 
                             onClick={toggleDropdown} 
-                            className="text-xl text-white hover:text-gray-300 transition duration-300"
+                            className="text-xl text-white hover:text-gray-300 transition duration-300 border-none"
                         >
                             AboutUs
                         </button>
@@ -88,7 +107,7 @@ export const Header = () => {
                             </ul>
                         )}
                     </li>
-                    <li><Link to='/admission' className="text-xl text-white hover:text-gray-300 transition duration-300">Requirements</Link></li>
+                    <li><Link to='/admission' className="text-xl text-white hover:text-gray-300 transition duration-300">Admission</Link></li>
                     <li><Link to='/news' className="text-xl text-white hover:text-gray-300 transition duration-300">News & Updates</Link></li>
                     <li><Link to='/contact-us' className="text-xl text-white hover:text-gray-300 transition duration-300">Contact</Link></li>
                     <li>
