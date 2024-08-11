@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
 
-import computer from '../images/computer.jpg';
-import civil from '../images/civil.jpg';
-import electronics from '../images/electronics.jpg';
-import learnmore from '../images/aLearnmore.png';
+import computer from '../../images/computer.jpg';
+import civil from '../../images/civil.jpg';
+import electronics from '../../images/electronics.jpg';
+import learnmore from '../../images/aLearnmore.png';
 
 // Example course data
 const coursesData = [
