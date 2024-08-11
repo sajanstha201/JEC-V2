@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect, useCallback } from 'react';
 import namaste from '../images/namaste.jfif';
 
 export default function Chatbot() {
@@ -8,17 +7,17 @@ export default function Chatbot() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const toggleChatbotVisibility = () => {
-    setIsChatbotVisible(!isChatbotVisible);
-  };
+  const toggleChatbotVisibility = useCallback(() => {
+    setIsChatbotVisible(prev => !prev);
+  }, []);
 
   useEffect(() => {
     if (isChatbotVisible && messages.length === 0) {
       setMessages([{ text: "Hi there! How can I help you today?", sender: 'bot' }]);
     }
-  }, [isChatbotVisible]);
+  }, [isChatbotVisible, messages.length]);
 
-  const handleSendMessage = () => {
+  const handleSendMessage = useCallback(() => {
     if (input.trim()) {
       setIsLoading(true);
       const newMessages = [...messages, { text: input, sender: 'user' }];
@@ -30,7 +29,7 @@ export default function Chatbot() {
         setIsLoading(false);
       }, 1000);
     }
-  };
+  }, [input, messages]);
 
   const getBotResponse = (userMessage) => {
     const responses = {
@@ -39,35 +38,30 @@ export default function Chatbot() {
       default: "I'm sorry, I don't understand that. Can you please rephrase?"
     };
 
-    const lowerCaseMessage = userMessage.toLowerCase();
-    return responses[lowerCaseMessage] || responses.default;
+    return responses[userMessage.toLowerCase()] || responses.default;
   };
 
   return (
     <>
-      <div className="flex flex-col items-center z-50 justify-center fixed bottom-0 right-0 mb-6 h-[300px] mr-0 md:mr-[20px] transition-transform transform hover:scale-105">
-        <div>
-          <img src={namaste} className="w-[150px] h-[150px] rounded-full shadow-lg" alt="Chatbot Icon" />
-        </div>
-        <div>
-          <button
-            type="button"
-            className="btn bg-gradient-to-r from-green-400 to-green-600 h-[80px] w-[200px] text-center text-[25px] text-white rounded-lg shadow-xl transition-transform transform hover:scale-105 flex flex-col items-center justify-center"
-            onClick={toggleChatbotVisibility}
-          >
-            <span className='font-bold'>JANAKI</span>
-            <span className='text-[15px] text-black font-bold'>Chat with Janaki</span>
-          </button>
-        </div>
+      <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 lg:bottom-8 lg:right-8 z-50 flex flex-col items-center space-y-4">
+        <img src={namaste} className="w-16 h-16 md:w-24 md:h-24 rounded-full shadow-lg" alt="Chatbot Icon" />
+        <button
+          type="button"
+          className="bg-gradient-to-r from-blue-500 to-red-500 text-white text-base md:text-lg lg:text-xl p-2 md:p-2.5 lg:p-3 rounded-lg shadow-xl transition-transform transform hover:scale-105"
+          onClick={toggleChatbotVisibility}
+        >
+          <span className='font-bold' style={{ fontFamily: "'Merriweather', serif" }}>JANAKI</span>
+          <span className='block text-xs md:text-sm lg:text-base font-bold' style={{ fontFamily: "'Merriweather', serif" }}>Chat with Janaki</span>
+        </button>
       </div>
 
       {isChatbotVisible && (
-        <div className="flex flex-col z-50 fixed bottom-0 right-0 mr-3 mb-7 h-[500px] border-2 border-gray-300 rounded-lg w-[400px] bg-white shadow-xl transition-transform transform scale-100">
-          <div className="flex  justify-between items-center bg-[#43a6d0] p-3 rounded-t-lg h-[70px] shadow-md">
-            <h1 className="font-bold text-[20px] text-white">CHAT WITH JANAKI</h1>
+        <div style={{ fontFamily: "'Merriweather', serif" }} className="fixed bottom-4 right-4 md:bottom-6 md:right-6 lg:bottom-8 lg:right-8 z-50 w-[400px] max-w-sm md:max-w-md lg:max-w-lg h-80 md:h-96 lg:h-[500px] bg-white border-2 border-gray-300 rounded-lg shadow-xl flex flex-col">
+          <div className="flex justify-between items-center bg-blue-500 p-3 rounded-t-lg h-16 shadow-md">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-white">CHAT WITH JANAKI</h1>
             <button
               type="button"
-              className="flex items-center justify-center w-[40px] h-[40px] rounded-full bg-red-500 text-white text-xl font-bold hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 transition-transform transform hover:scale-105"
+              className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-500 text-white text-xl font-bold hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 transition-transform transform hover:scale-105"
               onClick={() => setIsChatbotVisible(false)}
             >
               &times;
@@ -75,16 +69,18 @@ export default function Chatbot() {
           </div>
 
           <div className="flex-1 p-3 overflow-y-auto space-y-3">
-            {messages.map((message, index) => (
-              <div key={index} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`p-4 rounded-lg shadow-md ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'} max-w-[75%] relative`}>
-                  {message.text}
-                  {isLoading && index === messages.length - 1 && (
-                    <div className="absolute bottom-0 left-0 right-0 h-2 bg-blue-500 animate-pulse"></div>
-                  )}
+            <div aria-live="polite">
+              {messages.map((message, index) => (
+                <div key={index} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
+                  <div className={`p-4 rounded-lg shadow-md ${message.sender === 'user' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-black'} max-w-[80%] md:max-w-[70%] lg:max-w-[60%] relative`}>
+                    {message.text}
+                    {isLoading && index === messages.length - 1 && (
+                      <div className="absolute bottom-0 left-0 right-0 h-2 bg-blue-600 animate-pulse"></div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           <div className="p-3 bg-gray-100 rounded-b-lg flex items-center">
@@ -101,7 +97,7 @@ export default function Chatbot() {
             />
             <button
               type="button"
-              className="ml-2 btn bg-gradient-to-r from-blue-400 to-blue-600 text-white p-3 rounded-r-lg shadow-lg transition-transform transform hover:scale-105 active:bg-blue-700"
+              className="ml-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white p-3 rounded-r-lg shadow-lg transition-transform transform hover:scale-105 active:bg-blue-800"
               onClick={handleSendMessage}
             >
               <span className="font-bold text-lg">Send</span>

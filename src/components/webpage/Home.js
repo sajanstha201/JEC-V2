@@ -3,6 +3,8 @@ import { IntroductionSection } from "./IntroductionSection"
 import Updates from "./Updates";
 import Events from './Events/Events'
 import AboutUniversity from "./AboutUniversity";
+import Course from "./Course";
+import Cardslider  from "./Cardslider";
 
 export const Home=()=>{
     return(
@@ -12,6 +14,8 @@ export const Home=()=>{
         <Events/>
         <AboutUniversity/>
         <ImageSlider/>
+        <Course/>
+       
         </>
         
     )
