@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../media/images/jec-logo.png';
@@ -6,7 +6,6 @@ import logo from '../media/images/jec-logo.png';
 export const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const dropdownRef = useRef(null);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -15,24 +14,6 @@ export const Header = () => {
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
-
-    const handleOutsideClick = (e) => {
-        if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-            setIsDropdownOpen(false);
-        }
-    };
-
-    useEffect(() => {
-        if (isDropdownOpen) {
-            document.addEventListener('mousedown', handleOutsideClick);
-        } else {
-            document.removeEventListener('mousedown', handleOutsideClick);
-        }
-
-        return () => {
-            document.removeEventListener('mousedown', handleOutsideClick);
-        };
-    }, [isDropdownOpen]);
 
     return (
         <div className='z-50 w-full bg-blue-900' style={{ fontFamily: "'Merriweather', serif" }}>
@@ -52,22 +33,17 @@ export const Header = () => {
                 {/* Lists section */}
                 <div className='hidden md:flex items-center w-full md:w-auto'>
                     <ul className='flex flex-col md:flex-row gap-5 p-2'>
-                        {/* AboutUs with Dropdown */}
-                        <li className="relative" ref={dropdownRef}>
-                            <button 
-                                onClick={toggleDropdown} 
-                                className="text-xl text-white hover:text-gray-300 transition duration-300 border-none"
-                            >
-                                AboutUs
+                        {/* About Us with Dropdown */}
+                        <li className="relative group">
+                            <button className="text-xl text-white hover:text-gray-300 transition duration-300 border-none">
+                                About Us
                             </button>
-                            {isDropdownOpen && (
-                                <ul className="md:absolute left-0 my-2 w-60 bg-white text-black rounded-lg shadow-lg z-20 border-t-4 border-blue-500">
-                                    <li><Link to="/about/introduction" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 text-lg rounded-t-lg">Introduction</Link></li>
-                                    <li><Link to="/about/courses-offered" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 text-lg">Courses Offered</Link></li>
-                                    <li><Link to="/about/jec-advisory-board" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 text-lg rounded-b-lg">JEC Advisory Board</Link></li>
-                                    <li><Link to="teachers" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 text-lg rounded-b-lg">JEC Teachers</Link></li>
-                                </ul>
-                            )}
+                            <ul className="absolute left-0 hidden mt-2 w-60 bg-white text-black rounded-lg shadow-lg z-20 border-t-4 border-blue-500 group-hover:block">
+                                <li><Link to="/about/introduction" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 rounded-t-lg">Introduction</Link></li>
+                                <li><Link to="/about/courses-offered" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800">Courses Offered</Link></li>
+                                <li><Link to="/about/jec-advisory-board" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 rounded-b-lg">JEC Advisory Board</Link></li>
+                                <li><Link to="/teachers" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 rounded-b-lg">JEC Teachers</Link></li>
+                            </ul>
                         </li>
                         <li><Link to='/admission' className="text-xl text-white hover:text-gray-300 transition duration-300">Admission</Link></li>
                         <li><Link to='/facilities' className="text-xl text-white hover:text-gray-300 transition duration-300">Facilities</Link></li>
@@ -98,14 +74,14 @@ export const Header = () => {
                             onClick={toggleDropdown} 
                             className="text-xl text-white hover:text-gray-300 transition duration-300 border-none"
                         >
-                            AboutUs
+                            About Us
                         </button>
                         {isDropdownOpen && (
                             <ul className="mt-2 bg-white text-black rounded-lg shadow-lg z-20">
                                 <li><Link to="/about/introduction" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 rounded-t-lg">Introduction</Link></li>
                                 <li><Link to="/about/courses-offered" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800">Courses Offered</Link></li>
                                 <li><Link to="/about/jec-advisory-board" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 rounded-b-lg">JEC Advisory Board</Link></li>
-                                <li><Link to="teachers" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 text-lg rounded-b-lg">JEC Teachers</Link></li>
+                                <li><Link to="/teachers" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 text-lg rounded-b-lg">JEC Teachers</Link></li>
                             </ul>
                         )}
                     </li>
