@@ -3,7 +3,7 @@ import teacher from '../images/jec-teachers.jpg';
 
 export default function Teachers() {
     return (
-        <div className='sm:mx-4 md:mx-12 lg:mx-24 xl:mx-32 mb-5' >
+        <div className='sm:mx-4 md:mx-12 lg:mx-24 xl:mx-32 mb-5 w-[90%] mx-auto' >
             <section className='mt-8 mb-12'>
                 <h1 className='text-3xl md:text-4xl lg:text-5xl text-red-600 font-semibold text-center transition-all duration-500 hover:text-red-800'>
                     JEC'S FACULTY
