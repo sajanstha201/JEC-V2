@@ -35,10 +35,10 @@ export const Header = () => {
                     <ul className='flex flex-col md:flex-row gap-5 p-2'>
                         {/* About Us with Dropdown */}
                         <li className="relative group">
-                            <button className="text-xl text-white hover:text-gray-300 transition duration-300 border-none">
+                            <button className="text-xl text-white hover:text-gray-300 transition duration-700 border-none">
                                 About Us
                             </button>
-                            <ul className="absolute left-0 hidden mt-2 w-60 bg-white text-black rounded-lg shadow-lg z-20 border-t-4 border-blue-500 group-hover:block">
+                            <ul className="absolute left-0 hidden mt-0 w-60 bg-white text-black rounded-lg shadow-lg z-20 border-t-4 border-blue-500 group-hover:block">
                                 <li><Link to="/about/introduction" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 rounded-t-lg">Introduction</Link></li>
                                 <li><Link to="/about/courses-offered" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800">Courses Offered</Link></li>
                                 <li><Link to="/about/jec-advisory-board" className="block px-4 py-2 hover:bg-slate-200 hover:text-gray-800 rounded-b-lg">JEC Advisory Board</Link></li>
