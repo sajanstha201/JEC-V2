@@ -40,9 +40,9 @@ export const IntroductionSection = () => {
                 Janakpur Engineering is a leading research university pushing
                 boundaries and frontiers to brighten the future of the students.
               </p>
-                <Link to='/contact-us'>
+                <Link to='/login'>
               <button className="px-3 py-2 font-semibold hover:bg-blue-500 hover:text-white mt-2 rounded-lg border border-black">
-                CONTACT US
+                Login
               </button>
               </Link>
             </div>

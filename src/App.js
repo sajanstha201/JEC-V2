@@ -20,6 +20,8 @@ import Admission from './components/Admission/Admission';
 import Introduction from './components/About/Introduction';
 import JECadvisory from './components/About/JECadvisoryBoard';
 import Teachers from './components/About/Teachers';
+import Signup from './components/webpage/forms/signup';
+import Login from './components/webpage/forms/login';
 function App() {
   return (
     <HashRouter>
@@ -43,6 +45,8 @@ function App() {
           <Route path='/about/introduction' element={<Introduction/>}/>
           <Route path='/about/jec-advisory-board' element={<JECadvisory/>}/>
           <Route path="/teachers" element={<Teachers/>}/>
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       
         <Footer />
