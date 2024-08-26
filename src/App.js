@@ -20,14 +20,16 @@ import Admission from './components/Admission/Admission';
 import Introduction from './components/About/Introduction';
 import JECadvisory from './components/About/JECadvisoryBoard';
 import Teachers from './components/About/Teachers';
-import Signup from './components/webpage/forms/signup';
-import Login from './components/webpage/forms/login';
+import Signup from './components/webpage/forms/Signup';
+import Login from './components/webpage/forms/Login';
+import AdminHome from './Admin/AdminHome';
+import ApplicationStatus from './Admin/ApplicationStatus';
 function App() {
   return (
     <HashRouter>
       <div className="App">
         <Header />
-        <Chatbot/>
+        {/* <Chatbot/> */}
         <Routes>
           <Route path="/" element={<Home/>} />
           {/* <Route path="/about" element={<About />} /> */}
@@ -47,6 +49,8 @@ function App() {
           <Route path="/teachers" element={<Teachers/>}/>
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/admin/adminhome" element={<AdminHome/>}/>
+          <Route path="/applicationstatus" element={<ApplicationStatus/>}/>
         </Routes>
       
         <Footer />
