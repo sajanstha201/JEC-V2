@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../media/images/jec-logo.png';
+import { FaUser } from 'react-icons/fa';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import ProfileIcon from '../webpage/forms/ProfileIcon';
 
 export const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false); // New state for login status
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -17,7 +21,7 @@ export const Header = () => {
 
     return (
         <div className='z-50 w-full bg-blue-900' style={{ fontFamily: "'Merriweather', serif" }}>
-            <div className='lg:w-[85%] w-full flex justify-between items-center mx-auto p-2'>
+            <div className='lg:w-[95%] w-full flex justify-between items-center mx-auto p-2'>
                 {/* Logo section */}
                 <div>
                     <Link to="/"><img src={logo} className='h-20' alt="Logo" /></Link>
@@ -31,7 +35,7 @@ export const Header = () => {
                     )}
                 </div>
                 {/* Lists section */}
-                <div className='hidden md:flex items-center w-full md:w-auto'>
+                <div className='hidden md:flex items-center w-full md:w-auto gap-5'>
                     <ul className='flex flex-col md:flex-row gap-5 p-2'>
                         {/* About Us with Dropdown */}
                         <li className="relative group">
@@ -49,16 +53,22 @@ export const Header = () => {
                         <li><Link to='/facilities' className="text-xl text-white hover:text-gray-300 transition duration-300">Facilities</Link></li>
                         <li><Link to='/news' className="text-xl text-white hover:text-gray-300 transition duration-300">News & Updates</Link></li>
                         <li><Link to='/contact-us' className="text-xl text-white hover:text-gray-300 transition duration-300">Contact</Link></li>
+                        <li><Link to="/admin/adminhome" className='text-xl text-white hover:text-gray-300 transition duration-300'>Admin</Link></li>
                     </ul>
-                    <Link to='/onlineApply'>
-                        <button
-                            className="bg-blue-600 text-white py-2 px-4 rounded-lg text-sm md:text-base shadow-md hover:bg-blue-700 hover:shadow-lg transition duration-300 focus:outline-none ml-4"
-                        >
-                            Apply Online
-                        </button>
-                    </Link>
+                    {/* <div className='gap-3 flex justify-between items-end'>
+                        <Link to='/onlineApply'>
+                            <button
+                                className="bg-blue-600 text-white py-2 px-4 rounded-lg text-sm md:text-base shadow-md hover:bg-blue-700 hover:shadow-lg transition duration-300 focus:outline-none ml-4"
+                            >
+                                Apply Online
+                            </button>
+                        </Link>
+                        
+                    </div> */}
+                    <ProfileIcon/>
                 </div>
             </div>
+
             {/* Sliding Menu for small screens */}
             <div className={`fixed top-0 right-0 h-full bg-blue-900 z-50 transition-transform transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'} w-64 md:hidden`}>
                 <div className="flex justify-end p-4">
@@ -68,8 +78,11 @@ export const Header = () => {
                         aria-label="Close menu" 
                     />
                 </div>
-                <ul className='flex flex-col gap-5 p-5 mt-10'>
+                <ul className='flex flex-col gap-5 p-3 mt-10'>
                     <li>
+                        <div className='mb-4'>
+                        <ProfileIcon/>
+                        </div>
                         <button 
                             onClick={toggleDropdown} 
                             className="text-xl text-white hover:text-gray-300 transition duration-300 border-none"
@@ -88,7 +101,8 @@ export const Header = () => {
                     <li><Link to='/admission' className="text-xl text-white hover:text-gray-300 transition duration-300">Admission</Link></li>
                     <li><Link to='/news' className="text-xl text-white hover:text-gray-300 transition duration-300">News & Updates</Link></li>
                     <li><Link to='/contact-us' className="text-xl text-white hover:text-gray-300 transition duration-300">Contact</Link></li>
-                    <li>
+                    <li><Link to="/admin/adminhome" className='text-xl text-white hover:text-gray-300 transition duration-300'>Admin</Link></li>
+                    {/* <li>
                         <Link to='/onlineApply'>
                             <button
                                 className="bg-blue-600 text-white py-2 px-4 rounded-lg text-sm md:text-base shadow-md hover:bg-blue-700 hover:shadow-lg transition duration-300 focus:outline-none"
@@ -96,7 +110,7 @@ export const Header = () => {
                                 Apply Online
                             </button>
                         </Link>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </div>
